@@ -1,0 +1,11 @@
+Commands to install and upgrade packages
+
+apt install
+apt upgrade
+apt update
+
+
+Shutdown/restart/Poweroff
+
+poweroff
+
