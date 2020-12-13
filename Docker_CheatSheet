@@ -1,0 +1,21 @@
+#commands on Docker
+
+
+  167  docker version
+  168  service docker stop
+  170  service docker start
+  174  apt remove docker-ce -y
+  178  apt autoremove
+  184  apt install docker-ce
+  186  apt install docker-ce
+  188  service docker status
+  189  docker version
+  190  docker images
+  191  docker rmi $(docker images -q)
+  192  docker rmi $(docker images -q) -f
+  193  docker images
+  194  docker run hello-world
+  195  docker images
+  196  docker rmi $(docker images -q)
+  197  docker rmi $(docker images -q) -f
+  198  history
