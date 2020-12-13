@@ -1,11 +1,40 @@
 Commands to install and upgrade packages
 
-apt install
-apt upgrade
+# install package
+apt install --package-name
+
+# update package info-latest version etc, but wont install
 apt update
+
+# upgrade package
+apt upgrade
+apt update && apt upgrade
+#finish with auto remove
+
+apt-get autoremove
+
+apt update && apt upgrade -y && apt autoremove
+
 
 
 Shutdown/restart/Poweroff
 
 poweroff
 
+Color code prompt
+export PS1="\e[0;31m[\u@\h \W]\$ \e[m "
+
+Color	Code
+Black	0;30
+Blue	0;34
+Green	0;32
+Cyan	0;36
+Red	0;31
+Purple	0;35
+Brown	0;33
+Blue	0;34
+Green	0;32
+Cyan	0;36
+Red	0;31
+Purple	0;35
+Brown	0;33
