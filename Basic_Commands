@@ -50,4 +50,4 @@ temp=48.7'C
 $  vcgencmd measure_volts core
 volt=0.8350V
 
-
+sudo raspi-config
