@@ -1,0 +1,34 @@
+# Check statsu and enable ssh service
+
+sudo systemctl restart ssh.service
+sudo systemctl status ssh.service
+
+# netstat -ssh
+
+netstat -tulnp | grep ssh
+sudo netstat -tulnp | grep ssh
+
+# grep port number
+grep -i port /etc/ssh/sshd_config
+
+# edit port number 
+nano /etc/ssh/sshd_config
+
+# restart service
+systemctl restart ssh.service
+systemctl status ssh.service
+
+sudo netstat -tulnp | grep ssh
+
+ssh bhoobalan@localhost -p5581
+
+history|awk '{$1="";print substr($0,2)}'
+
+
+ufw status verbose
+ufw deny 5581
+ufw allow 5581
+
+systemctl restart ssh.service
+
+ufw enable
