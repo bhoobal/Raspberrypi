@@ -31,4 +31,7 @@ ufw allow 5581
 
 systemctl restart ssh.service
 
+#set firewall rule
+ufw allow from 192.168.1.0/24 to any port 3306
+
 ufw enable
