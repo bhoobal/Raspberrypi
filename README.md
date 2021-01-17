@@ -2,4 +2,6 @@
 
 Raspberry pi cheatsheet and commands
 
-Repo of list of things i tried out with raspberry
+# Enabling SSH 
+
+# Generate SSH key and connect from remote using host name 
