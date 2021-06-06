@@ -51,3 +51,7 @@ $  vcgencmd measure_volts core
 volt=0.8350V
 
 sudo raspi-config
+
+firmware update
+
+rpi-update
