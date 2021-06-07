@@ -36,6 +36,27 @@ reboot
  
  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
  
+ kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address=192.168.0.123
+systemctl status kubelet
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+sudo sysctl net.bridge.bridge-nf-call-iptables=1
+kubectl get pods -o wide -A
+kubectl taint nodes rpimasterk8s
+kubectl taint nodes --all node-role.kubernetes.io/master-
+kubectl apply -f https://k8s.io/examples/application/deployment.yaml
+kubectl get svc kubernetes-dashboard -n kubernetes-dashboard
+kubectl get svc -A
+kubectl get nodes --show-labels
+kubectl get svc kubernetes-dashboard -n kubernetes-dashboard
+kubectl -n kubernetes-dashboard describe secret admin-user-token
+kubectl get nodes
+kubectl create deployment nginx --image=nginx
+kubectl get deployments
+kubectl describe deployment nginx
+kubectl create service nodeport nginx --tcp=80:80
+kubectl get svc
+
  
+ https://www.thegeekdiary.com/how-to-access-kubernetes-dashboard-externally/
  
  
