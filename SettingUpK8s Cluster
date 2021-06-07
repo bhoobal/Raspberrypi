@@ -24,4 +24,18 @@ cgroup_enable=memory cgroup_memory=1
 # Make sure cgroup is enabled
 cat /proc/cgroups
 
-#Reboot
+#Reboot system
+reboot
+
+#Add path
+ export KUBECONFIG=/etc/kubernetes/admin.conf
+ nano ./.bashrc
+ 
+ sysctl net.bridge.bridge-nf-call-iptables=1
+ systemctl status kubelet
+ 
+ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+ 
+ 
+ 
+ 
