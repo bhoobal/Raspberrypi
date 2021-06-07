@@ -1,0 +1,27 @@
+# How I setup kubernetes cluster on Raspberry pi
+
+# Set up hostname via 
+raspi-config
+
+# cat raspinfo.txt
+System Information
+------------------
+Raspberry Pi 4 Model B Rev 1.4
+PRETTY_NAME="Raspbian GNU/Linux 10 (buster)"
+NAME="Raspbian GNU/Linux"
+VERSION_ID="10"
+VERSION="10 (buster)"
+
+Raspberry Pi reference 2021-05-07
+Generated using pi-gen, https://github.com/RPi-Distro/pi-gen, dcfd74d7d1fa293065ac6d565711e9ff891fe2b8, stage4
+
+Linux raspberrypi 5.10.17-v7l+ #1421 SMP Thu May 27 14:00:13 BST 2021 armv7l GNU/Linux
+
+# Set up cgroup - Add cgroup memory
+nano /boot/cmdline.txt
+cgroup_enable=memory cgroup_memory=1
+
+# Make sure cgroup is enabled
+cat /proc/cgroups
+
+#Reboot
